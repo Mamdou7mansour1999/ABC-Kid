@@ -19,14 +19,14 @@ $(document).scroll(function () {
 });
 
 // ===================== Slide Menu =====================
-$("button").mousedown(function () {
+$(".menu").mousedown(function () {
   $(this).css('border-radius', '50%');
 }).mouseup(function () {
   $(this).css('border-radius', '20%');
 });
 
-// menu opening
-$("button").click(function () {
+$(".menu").click(function (e) {
+  e.preventDefault();
   $('.menuSide').toggle(500);
 });
 
@@ -66,3 +66,4 @@ $(document).ready(function () {
     }
   });
 });
+
